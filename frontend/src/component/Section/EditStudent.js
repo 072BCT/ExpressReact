@@ -16,6 +16,7 @@ class EditStudent extends Component {
     state = {
       isOpen: false,
       students: [],
+        batchData: [],
       name: "",
       roll: "",
       batch: "",
@@ -70,7 +71,8 @@ class EditStudent extends Component {
           .then(res => res.json())
           .then(data => {
               this.setState({
-                  student: data[0]
+                  student: data[0],
+                  batchData: data[4],
               });
           })
           .catch(err => console.log('caught error',err))
@@ -94,8 +96,9 @@ class EditStudent extends Component {
                 onChange={this.handleChange}
                 style={{ textAlign: "center", width:200 }}
               >
-                <MenuItem value={2070}>2070</MenuItem>
-                <MenuItem value={2071}>2071</MenuItem>
+                             {this.state.batchData.map(item=>(
+                                 <MenuItem key={item.year} value={item.year}>{item.year}</MenuItem>
+                             ))}
               </Select>
               <br />
                 <br/>

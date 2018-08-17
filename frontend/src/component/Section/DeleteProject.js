@@ -27,12 +27,11 @@ class DeleteProject extends Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  handleSubmit = (event) => {
+  handleSubmit = () => {
     this.setState({
       isOpen: false
     });
-    event.preventDefault();
-    fetch("/delete",{
+    fetch("/deleteProject",{
         method: 'POST',
         headers:{
             'Content-Type': 'application/json'
@@ -40,7 +39,6 @@ class DeleteProject extends Component {
         body:JSON.stringify({id:this.state.id})
     }).then(res=>console.log(res))
         .catch(err=>console.log(err));
-    window.location.reload();
   };
 
   handleClick = () => {

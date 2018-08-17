@@ -62,6 +62,7 @@ class ESupervisor extends Component {
             designation:"",
             isOpen: false
         });
+        window.location.reload();
     };
 
     componentDidMount() {

@@ -54,7 +54,6 @@ class EditCategory extends Component {
       name: "",
       isOpen: false
     });
-    event.preventDefault();
     window.location.reload();
   };
 

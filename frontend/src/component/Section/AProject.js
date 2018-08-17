@@ -36,18 +36,14 @@ class AddProject extends Component {
     this.setState({ [event.target.name]: event.target.value });
   };
 
-  handleSubmit = event => {
-    let data = {
-      name: this.state.name,
-        year: this.state.year
-    };
-    console.log(data);
+  handleSubmit = () => {
+    console.log(this.state.name);
     fetch("/newProject", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
       },
-      body: JSON.stringify(data)
+      body: JSON.stringify({name: this.state.name})
     })
       .then(response => response.json())
       .catch(err => console.log(err));
@@ -102,8 +98,8 @@ class AddProject extends Component {
               <RButton
                 color={green}
                 buttonText={"Submit"}
-                style={{marginLeft:20}}
                 type={"submit"}
+                style={{marginLeft:20}}
               />
               <RButton
                 color={red}

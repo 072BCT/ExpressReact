@@ -31,15 +31,23 @@ class DeleteStudent extends Component {
         });
     };
 
-    handleDelete = () => {
+    handleDelete = (event) => {
         fetch("/deleteStudent", {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({id: this.state.id})
-        }).then(res => console.log(res))
-            .catch(err => console.log(err));
+        }).then(res => res.json())
+            .then(json => {
+                    if (json.result === "Failed") {
+                        alert("Student Is Linked With Some Project");
+                    } else {
+                        window.location.reload()
+                    }
+                })
+                .catch(err => console.log(err));
+        event.preventDefault();
     };
 
     componentDidMount() {

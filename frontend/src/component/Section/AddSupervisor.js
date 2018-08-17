@@ -52,6 +52,7 @@ class AddSupervisor extends Component {
             designation:"",
             isOpen: false
         });
+        window.location.reload();
     };
 
     componentDidMount() {

@@ -54,13 +54,12 @@ router.post("/newStudent", (req, res) => {
     console.log(req.body);
     let q = `INSERT INTO batch(year) VALUES ('${req.body.batch}')`;
     db.query(q, (err, result) => {
-
     });
     let q1 =
         `INSERT INTO student (name, Batch_batch_no, roll_no, Programme_name) VALUES('${req.body.name}','${req.body.batch}','${req.body.roll}','${req.body.programme}')`;
     db.query(q1, function (err, result) {
         if (err) console.log(err);
-        res.send(JSON.stringify(result));
+        res.send(data);
 
     });
     console.log(req.body);
@@ -83,7 +82,7 @@ router.post("/editStudent", (req, res) => {
         "'";
     db.query(edit, (err, result) => {
         if (err) console.log(err);
-        res.send(JSON.stringify(result));
+        res.send(data);
     });
 });
 
@@ -92,8 +91,13 @@ router.post("/deleteStudent", (req, res) => {
     console.log(req.body.id);
     let sql = `DELETE FROM student WHERE idStudent ='${req.body.id}'`;
     db.query(sql, (err, result, fields) => {
-        if (err) console.log(err);
-        res.send(JSON.stringify(result));
+        if (err) {
+            msg = "Failed";
+            res.send(JSON.stringify({result: msg}));
+        }
+        else {
+            res.send(data);
+        }
     });
 });
 
@@ -118,40 +122,33 @@ router.get("/displayProject", (req, res, next) => {
     });
 });
 
-router.post("/newProject", (req, res, next) => {
+router.use("/newProject", (req, res, next) => {
     console.log(req.body);
-    let sql = `INSERT INTO year_completed (year) VALUES('${req.body.year}')`;
-    db.query(sql, function (err, result) {
+    //let sql = `INSERT INTO year_completed (year) VALUES('${req.body.year}')`;
+    /*db.query(sql, function (err, result) {
         if (err) console.log(err);
-    });
+    });*/
     let q2 =
         `INSERT INTO project (name) VALUES('${req.body.name}');
-    UPDATE project
+    /*UPDATE project
     SET YearCompleted_year='${req.body.year}'
-    WHERE name='${req.body.name}';
+    WHERE name='${req.body.name}';*/
     `;
     db.query(q2, function (err, result) {
         if (err) console.log(err);
-        res.send(JSON.stringify(result));
+        res.send(data);
 
     });
-    console.log(req.body);
 });
 
 //EDIT PROJECT
 router.post("/editProject", (req, res) => {
     console.log(req.body);
-    let edit =
-        "UPDATE project SET name = '" +
-        req.body.name +
-        "',YearCompleted_year = '" +
-        req.body.year +
-        "' WHERE idProject = '" +
-        req.body.id +
-        "'";
+    let edit =`UPDATE project SET name='${req.body.name}'
+WHERE idProject = ${req.body.id}`;
     db.query(edit, (err, result, fields) => {
         if (err) console.log(err);
-        res.send(JSON.stringify(result));
+        res.send(data);
     });
 });
 
@@ -161,14 +158,7 @@ router.post("/deleteProject", (req, res) => {
     let sql = "DELETE FROM project WHERE idProject =" + "'" + req.body.id + "'";
     db.query(sql, (err, result, fields) => {
         if (err) console.log(err);
-        res.send(JSON.stringify(result));
-
-    });
-    db.query(query, (err, result) => {
-        if (err) console.log(err);
-        else {
-            data = result;
-        }
+        else res.send(data)
     });
 });
 
@@ -180,7 +170,7 @@ WHERE Project_idProject=${req.body.id};DELETE FROM project_has_category
 WHERE Project_idProject=${req.body.id}`;
     db.query(sql, (err, result) => {
         if (err) console.log(err);
-        res.send(JSON.stringify(result));
+        res.send(data);
 
     });
     db.query(query, (err, result) => {
@@ -206,7 +196,7 @@ router.post("/newSupervisor", (req, res, next) => {
     let q2 = `INSERT INTO supervisor (name, Title) VALUES('${req.body.name}','${req.body.designation}')`;
     db.query(q2, function (err, result) {
         if (err) console.log(err);
-        res.send(JSON.stringify(result));
+        res.send(data);
 
     });
     console.log(req.body);
@@ -229,10 +219,15 @@ router.post("/deleteSupervisor", (req, res) => {
     console.log(req.body.id);
     let sql =
         "DELETE FROM supervisor WHERE idInstructor =" + "'" + req.body.id + "'";
-    db.query(sql, (err, result) => {
-        if (err) console.log(err);
+    db.query(sql, (err, result, fields) => {
+        if (err) {
+            msg = "Failed";
+            res.send(JSON.stringify({result: msg}));
+        }
+        else {
+            res.send(data);
+        }
     });
-    res.send(data);
 });
 
 router.get("/selection", function (req, res) {
@@ -380,7 +375,7 @@ router.post("/newCategory", (req, res, next) => {
     let q2 = `INSERT INTO category (name) VALUES('${req.body.name}')`;
     db.query(q2, function (err, result) {
         if (err) console.log(err);
-        res.send(JSON.stringify(result));
+        res.send(data);
 
     });
     console.log(req.body);
@@ -393,7 +388,7 @@ router.post("/editCategory", (req, res) => {
     WHERE name='${req.body.prev}'`;
     db.query(edit, (err, result, fields) => {
         if (err) console.log(err);
-        res.send(JSON.stringify(result));
+        res.send(data);
     });
 });
 
@@ -403,7 +398,7 @@ router.post("/deleteCategory", (req, res) => {
     let sql = "DELETE FROM category WHERE name =" + "'" + req.body.name + "'";
     db.query(sql, (err, result, fields) => {
         if (err) console.log(err);
-        res.send(JSON.stringify(result));
+        res.send(data);
     });
 });
 

@@ -62,7 +62,6 @@ class EProject extends Component {
       id: "",
       isOpen: false
     });
-    event.preventDefault();
     window.location.reload();
   };
 
@@ -114,7 +113,7 @@ class EProject extends Component {
               <RButton
                 color={green}
                 buttonText={"Ok"}
-                onClick={this.handleEdit}
+                type={"submit"}
                 style={{marginLeft:20}}
               />
               <RButton

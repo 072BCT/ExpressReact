@@ -36,7 +36,7 @@ class AddStudent extends Component {
     this.setState({ [event.target.name]: event.target.value });
   };
 
-  handleSubmit = event => {
+  handleSubmit = () => {
     fetch("/newStudent", {
       method: "POST",
       headers: {
@@ -57,7 +57,6 @@ class AddStudent extends Component {
       isOpen: false
     });
     window.location.reload();
-    event.preventDefault();
   };
 
   render() {
