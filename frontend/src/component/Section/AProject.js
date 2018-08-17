@@ -99,18 +99,6 @@ class AddProject extends Component {
               />
               <br />
               <br />
-              <InputLabel>Completion Year:</InputLabel>
-              <RTextfield
-                style={{width: 250}}
-                value={this.state.year}
-                name={"year"}
-                autoFocus={true}
-                onChange={this.handleChange}
-                helperText = "e.g.2070"
-              />
-              <br/>
-              <br/>
-
               <RButton
                 color={green}
                 buttonText={"Submit"}

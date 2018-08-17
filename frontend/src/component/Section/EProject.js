@@ -108,18 +108,6 @@ class EProject extends Component {
                 autoFocus={true}
                 onChange={this.handleChange}
               />
-              <br />
-              <br />
-              <InputLabel>Completion Year:</InputLabel>
-              <RTextfield
-                style={{width: 250}}
-                value={this.state.year}
-                name={"year"}
-                required={true}
-                autoFocus={true}
-                onChange={this.handleChange}
-                helperText = "e.g.2070"
-              />
               <br/>
               <br/>
 

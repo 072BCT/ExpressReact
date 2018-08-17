@@ -11,6 +11,7 @@ import lime from "@material-ui/core/colors/lime";
 import Select from "@material-ui/core/Select/Select";
 import MenuItem from "@material-ui/core/MenuItem/MenuItem";
 import ReadFromExcel from "./ReadFromExcel";
+import sortBy from "lodash/sortBy";
 
 class AddStudent extends Component {
   state = {
@@ -58,16 +59,7 @@ class AddStudent extends Component {
     window.location.reload();
     event.preventDefault();
   };
-  componentDidMount() {
-    fetch("/studentDisplay")
-      .then(res => res.json())
-      .then(data => {
-        this.setState({
-          student: data[0]
-        });
-      })
-      .catch(err => console.log("caught error", err));
-  }
+
   render() {
     return (
       <Fragment>
@@ -102,8 +94,9 @@ class AddStudent extends Component {
                 onChange={this.handleChange}
                 style={{ textAlign: "center", width: 200 }}
               >
-                <MenuItem value={2070}>2070</MenuItem>
-                <MenuItem value={2071}>2071</MenuItem>
+                  {this.props.batch.map(item => (
+                      <MenuItem key={item.year} value={item.year}>{item.year}</MenuItem>
+                  ))}
               </Select>
               <br />
               <br />

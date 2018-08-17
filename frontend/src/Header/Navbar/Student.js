@@ -24,7 +24,8 @@ import {BrowserRouter, Link} from "react-router-dom";
 class Student extends Component {
   state = {
     isOpen: false,
-    students: []
+    students: [],
+      batch:[],
   };
   handleChange = event => {
     this.setState({
@@ -47,10 +48,11 @@ class Student extends Component {
   componentDidMount() {
     fetch("/studentDisplay")
       .then(res => res.json())
-      .then(data => this.setState({ students: data[0] }));
+      .then(data => this.setState({ students: data[0], batch:data[4] }));
   }
 
   render() {
+    console.log(this.state);
     let headings = this.props.title.map(heading => {
       return (
         <TableCell key={heading}>
@@ -80,7 +82,7 @@ class Student extends Component {
             style={{ marginRight: 20 }}
           />
         </Link>
-        <AddStudent />
+        <AddStudent batch={this.state.batch} />
         <Table>
           <TableHead>
             <TableRow>{headings}</TableRow>

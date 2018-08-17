@@ -52,9 +52,6 @@ class Project extends Component {
           <Typography variant={"title"}>Name</Typography>
         </TableCell>
         <TableCell>
-          <Typography variant={"title"}>Completion Year</Typography>
-        </TableCell>
-        <TableCell>
           <Typography variant={"title"}>Action</Typography>
         </TableCell>
       </Fragment>
@@ -63,7 +60,6 @@ class Project extends Component {
       return (
         <TableRow key={project.idProject}>
           <TableCell>{project.name}</TableCell>
-          <TableCell>{project.YearCompleted_year}</TableCell>
           <TableCell>
             <EProject data={project} />
             <DProject data={project.idProject} />
