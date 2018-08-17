@@ -1,7 +1,7 @@
 import React, {Component, Fragment} from 'react';
-import Button from "@material-ui/core/es/Button/Button";
+import Button from "@material-ui/core/Button/Button";
 import theme from "../../theme/theme";
-import MuiThemeProvider from "@material-ui/core/es/styles/MuiThemeProvider";
+import MuiThemeProvider from "@material-ui/core/styles/MuiThemeProvider";
 import {Link} from "react-router-dom";
 
 type props = {

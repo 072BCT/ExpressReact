@@ -1,21 +1,21 @@
 import React, { Component, Fragment } from "react";
 import PropTypes from "prop-types";
-import lime from "@material-ui/core/es/colors/lime";
+import lime from "@material-ui/core/colors/lime";
 import RButton from "./RButton";
-import Modal from "@material-ui/core/es/Modal/Modal";
-import Paper from "@material-ui/core/es/Paper/Paper";
-import TableRow from "@material-ui/core/es/TableRow/TableRow";
-import TableCell from "@material-ui/core/es/TableCell/TableCell";
-import Typography from "@material-ui/core/es/Typography/Typography";
-import Table from "@material-ui/core/es/Table/Table";
-import TableHead from "@material-ui/core/es/TableHead/TableHead";
-import TableBody from "@material-ui/core/es/TableBody/TableBody";
-import Dialog from "@material-ui/core/es/Dialog/Dialog";
+import Modal from "@material-ui/core/Modal/Modal";
+import Paper from "@material-ui/core/Paper/Paper";
+import TableRow from "@material-ui/core/TableRow/TableRow";
+import TableCell from "@material-ui/core/TableCell/TableCell";
+import Typography from "@material-ui/core/Typography/Typography";
+import Table from "@material-ui/core/Table/Table";
+import TableHead from "@material-ui/core/TableHead/TableHead";
+import TableBody from "@material-ui/core/TableBody/TableBody";
+import Dialog from "@material-ui/core/Dialog/Dialog";
 import { BrowserRouter, Link } from "react-router-dom";
 import AddProject from "../../component/Section/AProject";
 import EProject from "../../component/Section/EProject";
 import DProject from "../../component/Section/DProject";
-import yellow from "@material-ui/core/es/colors/yellow";
+import yellow from "@material-ui/core/colors/yellow";
 
 class Project extends Component {
   state = {

@@ -1,17 +1,17 @@
 import React, {Component, Fragment} from 'react';
 import PropTypes from 'prop-types';
-import red from "@material-ui/core/es/colors/red";
+import red from "@material-ui/core/colors/red";
 import RButton from "../../Header/Navbar/RButton";
-import green from "@material-ui/core/es/colors/green";
-import Modal from "@material-ui/core/es/Modal/Modal";
-import Dialog from "@material-ui/core/es/Dialog/Dialog";
-import DialogContent from "@material-ui/core/es/DialogContent/DialogContent";
-import DialogContentText from "@material-ui/core/es/DialogContentText/DialogContentText";
-import Typography from "@material-ui/core/es/Typography/Typography";
-import Divider from "@material-ui/core/es/Divider/Divider";
-import DialogActions from "@material-ui/core/es/DialogActions/DialogActions";
-import Done from "@material-ui/icons/es/Done";
-import Clear from "@material-ui/icons/es/Clear";
+import green from "@material-ui/core/colors/green";
+import Modal from "@material-ui/core/Modal/Modal";
+import Dialog from "@material-ui/core/Dialog/Dialog";
+import DialogContent from "@material-ui/core/DialogContent/DialogContent";
+import DialogContentText from "@material-ui/core/DialogContentText/DialogContentText";
+import Typography from "@material-ui/core/Typography/Typography";
+import Divider from "@material-ui/core/Divider/Divider";
+import DialogActions from "@material-ui/core/DialogActions/DialogActions";
+import Done from "@material-ui/icons/Done";
+import Clear from "@material-ui/icons/Clear";
 
 class DeleteStudent extends Component {
     state = {

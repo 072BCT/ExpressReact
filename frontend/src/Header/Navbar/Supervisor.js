@@ -1,23 +1,23 @@
 import React, { Component, Fragment } from "react";
 import PropTypes from "prop-types";
-import lime from "@material-ui/core/es/colors/lime";
+import lime from "@material-ui/core/colors/lime";
 import RButton from "./RButton";
-import Modal from "@material-ui/core/es/Modal/Modal";
-import Paper from "@material-ui/core/es/Paper/Paper";
-import TableRow from "@material-ui/core/es/TableRow/TableRow";
-import TableCell from "@material-ui/core/es/TableCell/TableCell";
-import Typography from "@material-ui/core/es/Typography/Typography";
-import Table from "@material-ui/core/es/Table/Table";
-import TableHead from "@material-ui/core/es/TableHead/TableHead";
-import TableBody from "@material-ui/core/es/TableBody/TableBody";
-import Dialog from "@material-ui/core/es/Dialog/Dialog";
-import DialogContent from "@material-ui/core/es/DialogContent/DialogContent";
-import DialogTitle from "@material-ui/core/es/DialogTitle/DialogTitle";
+import Modal from "@material-ui/core/Modal/Modal";
+import Paper from "@material-ui/core/Paper/Paper";
+import TableRow from "@material-ui/core/TableRow/TableRow";
+import TableCell from "@material-ui/core/TableCell/TableCell";
+import Typography from "@material-ui/core/Typography/Typography";
+import Table from "@material-ui/core/Table/Table";
+import TableHead from "@material-ui/core/TableHead/TableHead";
+import TableBody from "@material-ui/core/TableBody/TableBody";
+import Dialog from "@material-ui/core/Dialog/Dialog";
+import DialogContent from "@material-ui/core/DialogContent/DialogContent";
+import DialogTitle from "@material-ui/core/DialogTitle/DialogTitle";
 import AddSupervisor from "../../component/Section/AddSupervisor";
 import sortBy from "lodash/sortBy";
 import ESupervisor from "../../component/Section/ESupervisor";
 import DSupervisor from "../../component/Section/DSupervisor";
-import yellow from "@material-ui/core/es/colors/yellow";
+import yellow from "@material-ui/core/colors/yellow";
 import { BrowserRouter, Link } from "react-router-dom";
 
 class Supervisor extends Component {

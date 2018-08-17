@@ -1,5 +1,5 @@
 import React, {Component, Fragment} from 'react';
-import Grid from "@material-ui/core/es/Grid/Grid";
+import Grid from "@material-ui/core/Grid/Grid";
 import Navbar from "../../Header/Navbar/Navbar";
 import Search from "../Section/Search";
 

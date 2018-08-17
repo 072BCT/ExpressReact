@@ -2,16 +2,16 @@ import React from "react";
 import Input from '@material-ui/core/Input';
 import XLSX from 'xlsx/xlsx';
 import RButton from "../../Header/Navbar/RButton";
-import orange from "@material-ui/core/es/colors/orange";
+import orange from "@material-ui/core/colors/orange";
 import Modal from "@material-ui/core/Modal/Modal";
-import green from "@material-ui/core/es/colors/green";
-import red from "@material-ui/core/es/colors/red";
+import green from "@material-ui/core/colors/green";
+import red from "@material-ui/core/colors/red";
 import Paper from "@material-ui/core/Paper/Paper";
 import RTextfield from "../../container/RTextField";
 import InputLabel from "@material-ui/core/InputLabel/InputLabel";
 import Select from "@material-ui/core/Select/Select";
 import MenuItem from "@material-ui/core/MenuItem/MenuItem";
-import Grid from "@material-ui/core/es/Grid/Grid";
+import Grid from "@material-ui/core/Grid/Grid";
 
 import excel from '../../assets/img/Excel.png';
 

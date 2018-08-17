@@ -2,7 +2,7 @@ import React, {Component} from "react";
 import InputLabel from "@material-ui/core/InputLabel";
 import Select from "@material-ui/core/Select";
 import MenuItem from "@material-ui/core/MenuItem";
-import red from "@material-ui/core/es/colors/red";
+import red from "@material-ui/core/colors/red";
 import RButton from "../../Header/Navbar/RButton";
 import Divider from "@material-ui/core/Divider";
 import LinkProject from "./LinkProject";
@@ -10,9 +10,9 @@ import Clear from "@material-ui/icons/Clear";
 import Print from '@material-ui/icons/Print';
 import XLSX from 'xlsx/xlsx'
 import sortBy from 'lodash/sortBy';
-import Grid from "@material-ui/core/es/Grid/Grid";
+import Grid from "@material-ui/core/Grid/Grid";
 import DisplayProject from "./DisplayProject";
-import green from "@material-ui/core/es/colors/green";
+import green from "@material-ui/core/colors/green";
 
 class Search extends Component {
     constructor(props) {

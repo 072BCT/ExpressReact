@@ -1,19 +1,19 @@
 //@flow
 
 import React, { Component, Fragment } from "react";
-import AppBar from "@material-ui/core/es/AppBar/AppBar";
-import Toolbar from "@material-ui/core/es/Toolbar/Toolbar";
+import AppBar from "@material-ui/core/AppBar/AppBar";
+import Toolbar from "@material-ui/core/Toolbar/Toolbar";
 import logo from "../../assets/img/logo.png";
-import Typography from "@material-ui/core/es/Typography/Typography";
+import Typography from "@material-ui/core/Typography/Typography";
 import theme from "../../theme/theme";
-import MuiThemeProvider from "@material-ui/core/es/styles/MuiThemeProvider";
+import MuiThemeProvider from "@material-ui/core/styles/MuiThemeProvider";
 import "./../../index.css";
 import { BrowserRouter, Link, Route, Switch } from "react-router-dom";
 import Project from "./Project";
 import Student from "./Student";
 import Supervisor from "./Supervisor";
 import RButton from "./RButton";
-import yellow from "@material-ui/core/es/colors/yellow";
+import yellow from "@material-ui/core/colors/yellow";
 
 type props = {
   title: string,

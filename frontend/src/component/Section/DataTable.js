@@ -1,11 +1,11 @@
 import React, { Component, Fragment } from "react";
 
-import Table from "@material-ui/core/es/Table/Table";
-import TableHead from "@material-ui/core/es/TableHead/TableHead";
-import TableRow from "@material-ui/core/es/TableRow/TableRow";
-import TableCell from "@material-ui/core/es/TableCell/TableCell";
-import TableBody from "@material-ui/core/es/TableBody/TableBody";
-import Typography from "@material-ui/core/es/Typography/Typography";
+import Table from "@material-ui/core/Table/Table";
+import TableHead from "@material-ui/core/TableHead/TableHead";
+import TableRow from "@material-ui/core/TableRow/TableRow";
+import TableCell from "@material-ui/core/TableCell/TableCell";
+import TableBody from "@material-ui/core/TableBody/TableBody";
+import Typography from "@material-ui/core/Typography/Typography";
 import DeleteProject from "./DeleteProject";
 import EditProject from "./EditProject";
 import sortBy from "lodash";

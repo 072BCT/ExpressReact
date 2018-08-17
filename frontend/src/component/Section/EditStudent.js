@@ -1,16 +1,16 @@
 import React, {Component, Fragment} from 'react';
 import PropTypes from 'prop-types';
-import InputLabel from "@material-ui/core/es/InputLabel/InputLabel";
+import InputLabel from "@material-ui/core/InputLabel/InputLabel";
 import RTextfield from "../../container/RTextField";
 import RButton from "../../Header/Navbar/RButton";
-import Typography from "@material-ui/core/es/Typography/Typography";
-import Modal from "@material-ui/core/es/Modal/Modal";
-import Paper from "@material-ui/core/es/Paper/Paper";
-import green from "@material-ui/core/es/colors/green";
-import TextField from "@material-ui/core/es/TextField/TextField";
-import red from "@material-ui/core/es/colors/red";
-import MenuItem from "@material-ui/core/es/MenuItem/MenuItem";
-import Select from "@material-ui/core/es/Select/Select";
+import Typography from "@material-ui/core/Typography/Typography";
+import Modal from "@material-ui/core/Modal/Modal";
+import Paper from "@material-ui/core/Paper/Paper";
+import green from "@material-ui/core/colors/green";
+import TextField from "@material-ui/core/TextField/TextField";
+import red from "@material-ui/core/colors/red";
+import MenuItem from "@material-ui/core/MenuItem/MenuItem";
+import Select from "@material-ui/core/Select/Select";
 
 class EditStudent extends Component {
     state = {

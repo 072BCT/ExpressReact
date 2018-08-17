@@ -1,17 +1,17 @@
 import React, {Component, Fragment} from 'react';
 import RButton from "../../Header/Navbar/RButton";
-import red from "@material-ui/core/es/colors/red";
-import Modal from "@material-ui/core/es/Modal/Modal";
-import Typography from "@material-ui/core/es/Typography/Typography";
-import Paper from "@material-ui/core/es/Paper/Paper";
-import InputLabel from "@material-ui/core/es/InputLabel/InputLabel";
-import TextField from "@material-ui/core/es/TextField/TextField";
-import green from "@material-ui/core/es/colors/green";
-import Grid from "@material-ui/core/es/Grid/Grid";
-import Select from "@material-ui/core/es/Select/Select";
-import Divider from "@material-ui/core/es/Divider/Divider";
-import cyan from "@material-ui/core/es/colors/cyan";
-import Add from "@material-ui/icons/es/Add";
+import red from "@material-ui/core/colors/red";
+import Modal from "@material-ui/core/Modal/Modal";
+import Typography from "@material-ui/core/Typography/Typography";
+import Paper from "@material-ui/core/Paper/Paper";
+import InputLabel from "@material-ui/core/InputLabel/InputLabel";
+import TextField from "@material-ui/core/TextField/TextField";
+import green from "@material-ui/core/colors/green";
+import Grid from "@material-ui/core/Grid/Grid";
+import Select from "@material-ui/core/Select/Select";
+import Divider from "@material-ui/core/Divider/Divider";
+import cyan from "@material-ui/core/colors/cyan";
+import Add from "@material-ui/icons/Add";
 
 class Form extends Component {
     state = {
