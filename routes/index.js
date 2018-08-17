@@ -196,6 +196,12 @@ router.post("/newSupervisor", (req, res, next) => {
     let q2 = `INSERT INTO supervisor (name, Title) VALUES('${req.body.name}','${req.body.designation}')`;
     db.query(q2, function (err, result) {
         if (err) console.log(err);
+        db.query(query, (err, result) => {
+    if (err) console.log(err);
+    else {
+        data = result;
+    }
+});
         res.send(data);
 
     });
@@ -210,6 +216,12 @@ router.post("/editSupervisor", (req, res) => {
         WHERE idInstructor = ('${req.body.id}')`;
     db.query(edit, (err, result, fields) => {
         if (err) console.log(err);
+        db.query(query, (err, result) => {
+    if (err) console.log(err);
+    else {
+        data = result;
+    }
+});
     });
     res.send(data);
 });
@@ -225,6 +237,12 @@ router.post("/deleteSupervisor", (req, res) => {
             res.send(JSON.stringify({result: msg}));
         }
         else {
+            db.query(query, (err, result) => {
+    if (err) console.log(err);
+    else {
+        data = result;
+    }
+});
             res.send(data);
         }
     });
@@ -375,6 +393,12 @@ router.post("/newCategory", (req, res, next) => {
     let q2 = `INSERT INTO category (name) VALUES('${req.body.name}')`;
     db.query(q2, function (err, result) {
         if (err) console.log(err);
+        db.query(query, (err, result) => {
+    if (err) console.log(err);
+    else {
+        data = result;
+    }
+});
         res.send(data);
 
     });
@@ -388,6 +412,12 @@ router.post("/editCategory", (req, res) => {
     WHERE name='${req.body.prev}'`;
     db.query(edit, (err, result, fields) => {
         if (err) console.log(err);
+        db.query(query, (err, result) => {
+    if (err) console.log(err);
+    else {
+        data = result;
+    }
+});
         res.send(data);
     });
 });
@@ -398,6 +428,12 @@ router.post("/deleteCategory", (req, res) => {
     let sql = "DELETE FROM category WHERE name =" + "'" + req.body.name + "'";
     db.query(sql, (err, result, fields) => {
         if (err) console.log(err);
+        db.query(query, (err, result) => {
+    if (err) console.log(err);
+    else {
+        data = result;
+    }
+});
         res.send(data);
     });
 });
