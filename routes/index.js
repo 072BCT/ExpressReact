@@ -40,7 +40,7 @@ db.query(query, (err, result) => {
 
 /* GET home page. */
 studentQuery =
-    "SELECT * FROM student;SELECT * FROM Supervisor;SELECT * FROM Project;SELECT * FROM year_completed;SELECT * FROM batch;SELECT * FROM Category;";
+    "SELECT * FROM student;SELECT * FROM Supervisor;SELECT * FROM Project;SELECT * FROM programme;SELECT * FROM batch;SELECT * FROM Category;";
 router.get("/studentDisplay", (req, res, next) => {
     db.query(studentQuery, (err, results) => {
         if (err) console.log(err);
