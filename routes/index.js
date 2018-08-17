@@ -7,8 +7,8 @@ let stuId, proId, supId, nSql, msg;
 // Create Connection
 const db = mysql.createConnection({
     host: "localhost",
-    user: "root",
-    password: "",
+    user: "sujan",
+    password: "salina@@@",
     database: "beproject",
     multipleStatements: true
 });
