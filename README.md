@@ -3,14 +3,14 @@ WEB BASED PROJECT MANAGEMENT
 
 TO INSTALL
 
-cd projectdirectory
+# cd projectdirectory
 
-npm install
+# npm install
 
-npm start
+# npm start
 
-cd frontend
+# cd frontend
 
-npm install
+# npm install
 
-npm start
+# npm start
